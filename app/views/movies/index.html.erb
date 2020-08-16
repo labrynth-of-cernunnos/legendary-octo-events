@@ -1,9 +1,13 @@
 <h1>Movies</h1>
 
 <% @movies.each do |movie|%>
-<h2><%= movie.title %></h2>
-<ul>
-  <li>Rating: <%= movie.rating %></li>
-  <li>Total Gross: <%= number_to_currency(movie.total_gross) %></li>
-  </ul>
+  <article>
+    <h2><%= movie.title %></h2>
+    <ul>
+      <li>Rating: <%= movie.rating %></li>
+      <li>Total Gross: <%= number_to_currency(movie.total_gross) %></li>
+      <li>Description: <%= movie.description %></li>
+      <li>Released: <%= movie.released_on.strftime("%B, %Y") %></li>
+      </ul>
+  </article>
 <% end %>
