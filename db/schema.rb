@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200816170710) do
+ActiveRecord::Schema.define(version: 20200913023201) do
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
@@ -18,6 +18,12 @@ ActiveRecord::Schema.define(version: 20200816170710) do
     t.decimal "total_gross"
     t.text "description"
     t.date "released_on"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
   end
 
 end
